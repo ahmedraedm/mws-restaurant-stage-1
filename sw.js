@@ -10,8 +10,7 @@
     'img/8.jpg',
     'img/9.jpg',
     'img/10.jpg',
-    'css/styles.css',
-    'data/restaurants.json'
+    'css/styles.css'
   ];
   
   var staticCacheName = 'cache-v1';
@@ -40,7 +39,7 @@
         // Add fetched files to the cache
         .then(function(response) {
         return caches.open(staticCacheName).then(function(cache) {
-          if (event.request.url.indexOf('test') < 0) {
+          if (event.request.url.indexOf('restaurants.json') < 0) {
             cache.put(event.request.url, response.clone());
           }
           return response;
