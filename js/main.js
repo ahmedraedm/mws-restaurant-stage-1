@@ -159,6 +159,7 @@ resetRestaurants = (restaurants) => {
  */
 fillRestaurantsHTML = (restaurants = self.restaurants) => {
   const ul = document.getElementById('restaurants-list');
+  ul.className = 'grid';
   restaurants.forEach(restaurant => {
     ul.append(createRestaurantHTML(restaurant));
   });
