@@ -1,6 +1,17 @@
 @charset "utf-8";
 /* CSS Document */
 
+.skip-link{
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 100;
+}
+
+.skip-link:focus{
+  top: 0px;
+}
+
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
